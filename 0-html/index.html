@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>
+      Portafolio midudev | Ingeniero de Software con 15 annios de experiencia
+    </title>
+    <meta
+      name="Descipcion"
+      content="Portafolio de midudev, 15 annios de experiencia como Ingeniero de Software"
+    />
+
+    <!-- Opengraph.xyz -->
+    <!-- opengrahp.com | propiedades para el encabezado y ceo-->
+    <meta
+      property="og:title"
+      content="Protafolio de un Ingeniero de Software"
+    />
+    <meta
+      property="og:description"
+      content="Portafolio de midudev, 15 annios de experiencia como ingeniero de Software"
+    />
+    <meta
+      property="og:image"
+      content="https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723639491706?e=2147483647&v=beta&t=NPFMSKh91H_3uvF2spmjp64ouZDwCwTVfMOAlsfWkJk"
+    />
+    <meta
+      property="og:image:alt"
+      content="Una fotografia de Miguel Angel Duran"
+    />
+
+    <link rel="alternate" href="https://midu.dev/en" hreflang="es-GB" />
+    <link rel="canonical" href="https://midu.dev" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#09f" />
+
+    <link
+      rel="icon"
+      type="image/jpg"
+      href="https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723639491706?e=2147483647&v=beta&t=NPFMSKh91H_3uvF2spmjp64ouZDwCwTVfMOAlsfWkJk"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Portafolio de midudev</h1>
+
+      <nav>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <!-- noreferrer, evita enviar datos adicionales como tokents o passwords -->
+        <a href="https://twitch.tv/midudev" target="_blank" rel="noreferrer"
+          >Live Twitch</a
+        >
+      </nav>
+    </header>
+
+    <!-- <video
+      autoplay
+      muted
+      loop
+      controls
+      poster=""
+      src="https://www.youtube.com/embed/tAv5Rxpl_UY?si=uGcwSBPPvRmA2Feo"
+    ></video> -->
+    <!-- 
+    <iframe
+      style="width: 100%; aspect-ratio: 16/9"
+      src="https://www.youtube.com/embed/tAv5Rxpl_UY?si=uGcwSBPPvRmA2Feo"
+      title="YouTube video player"
+      start="30"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe> -->
+
+    <!-- <audio controls moted src=""></audio> -->
+
+    <!-- modal | Ventana Emergente -->
+    <dialog id="dialog">
+      <h1>Sabias que puedes abrir un modal asi?</h1>
+      <p>y est total nativo!</p>
+      <button id="hide">Cerrer botton</button>
+    </dialog>
+
+    <button id="show">Ver mas informacion!</button>
+    <!-- Cerrar modal  -->
+    <script>
+      window.show.addEventListener("click", () => {
+        window.dialog.showModal();
+      });
+
+      window.hide.addEventListener("click", () => {
+        window.dialog.close();
+      });
+    </script>
+
+    <main>
+      <p>
+        +15 años de experiencia como <strong>Ingeniero de Software</strong>.
+        Creador y divulgador de programación.
+      </p>
+
+      <h2 id="experiencia">Experiencia</h2>
+
+      <ul>
+        <li class="list-item">Adevinta - 2022</li>
+        <li class="list-item">Hubii - 2020</li>
+        <li class="list-item">Nacencia - 2015</li>
+      </ul>
+
+      <a
+        download
+        href="https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723639491706?e=2147483647&v=beta&t=NPFMSKh91H_3uvF2spmjp64ouZDwCwTVfMOAlsfWkJk"
+      >
+        <img
+          id="photo-image"
+          width="200"
+          height="200"
+          title="Foto de midudev"
+          alt="Una fotografia de Miguel Angel Duran sonriendo y mirando a camara"
+          src="https://media.licdn.com/dms/image/v2/D4D03AQHigBNGVqRnOA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1723639491706?e=2147483647&v=beta&t=NPFMSKh91H_3uvF2spmjp64ouZDwCwTVfMOAlsfWkJk"
+        />
+      </a>
+
+      <h2 id="proyectos">Proyectos Ralizados</h2>
+
+      <aside>
+        <header>
+          <h3>Mis Tecnologias Favoritas</h3>
+        </header>
+
+        <ol type="1" reversed start="10">
+          <li>HTML</li>
+          <li value="5">CSS</li>
+          <li>JavaScript</li>
+          <li>Node.js</li>
+        </ol>
+      </aside>
+
+      <button>Haz click</button>
+
+      <section>
+        <article>
+          <header>
+            <h4>Sitio Web Corporativo</h4>
+          </header>
+          <p>
+            Desarrollo de un sitio web Corporativo con una interfaz amigable y
+            moderna
+          </p>
+
+          <footer>
+            <small>Tecnologias Utilizadas: HTML, CSS, JavaScript</small>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h4>Aplicacion Web de E-commerce</h4>
+          </header>
+          <p>
+            Creacion de una plataforma de comercio electronico para una tienda
+            local
+          </p>
+          <footer>
+            <small>Tecnologias Utilizadas: React, Node.js MongoDB </small>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h4>Aplicaion Movil de Rastreo de Fitness</h4>
+          </header>
+          <p>
+            Desarrollo de una aplicacion movil para rastrear actividades fisicas
+            y habitos de alimentacion
+          </p>
+        </article>
+
+        <article>
+          <header>
+            <h4>La pagina de Testla</h4>
+            <img
+              style="width: 100%; aspect-ratio: 638/317"
+              loading="lazy"
+              src="./testla.png"
+              alt="Captura de pantalla de Testla"
+            />
+          </header>
+          <p>Elon Must me llamo e hice en una tarde, esta pagina desde cero</p>
+        </article>
+        <footer>
+          <small>Tecnologias Utilizadas: HTML, CSS & JavaScript</small>
+        </footer>
+      </section>
+
+      <section>
+        <h2>Preguntas Frecuentes</h2>
+
+        <details open>
+          <summary>Que estudios tienes?</summary>
+          <p>
+            Estudie en la universidad de Vilanova una Ingenieria de Informatica
+            durnate 5 annios.
+          </p>
+        </details>
+        <details>
+          <summary>Cuales son tus hobbies?</summary>
+          <p>
+            Me gusta mucho el deporte, sobre todo el futbol y el baloncesto.
+          </p>
+        </details>
+
+        <details>
+          <summary>Cual es tu lenguaje favorito?</summary>
+          <p>
+            Me encanta JavaScript, es un lengjuaje muy versatil y con el que se
+            puede hacer muchas coasas.
+          </p>
+        </details>
+      </section>
+
+      <section>
+        <h2>Formulario de contacto</h2>
+
+        <form method="post" action="/">
+          <fieldset>
+            <legend>Informacion Personal</legend>
+            <div>
+              <label for="name"
+                >Nombre:
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Miguel Duran"
+                />
+              </label>
+            </div>
+            <div>
+              <label for="email"
+                >Email:
+                <input
+                  type="text"
+                  id="email"
+                  name="email"
+                  placeholder="midudev@gmail.com"
+                  required
+                />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Informacion Adicional:</legend>
+            <div>
+              <label for=""
+                >Telefono:
+                <input
+                  type="tel"
+                  name="telefono"
+                  placeholder="55098900"
+                  required
+                  pattern=""
+                />
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Otros</legend>
+            <div>
+              <label for="why"> Por que quieres contactarnos?</label>
+              <select name="why" id="why">
+                <option value="1">Trabajo</option>
+                <option value="2">Duda</option>
+                <option value="3">Mas Informacion</option>
+              </select>
+            </div>
+            <div>
+              <label for="terms">Aceptas los terminos?</label>
+              <input type="checkbox" id="terms" name="terms" required />
+            </div>
+
+            <div>
+              <datalist id="languages">
+                <option value="JavaScript"></option>
+                <option value="Python"></option>
+                <option value="Java"></option>
+                <option value="C#"></option>
+              </datalist>
+
+              <label>
+                Con que lenguaje quieres que te ayude?
+                <input list="languages" name="languages" />
+              </label>
+            </div>
+          </fieldset>
+          <input type="submit" value="Enviar contacto" required />
+        </form>
+      </section>
+    </main>
+
+    <footer id="twitch">
+      Copyrigth © 2025 - El portafolio mas lindo del Mundo.
+
+      <a href="mailto:miduga@gmail.com">Enviame un correo</a>
+      <a href="te:+3468888889">Llamar por telefono</a>
+      <a href="whatsapp://send?text=Hola midudev">Llamar por telefono</a>
+    </footer>
+  </body>
+</html>

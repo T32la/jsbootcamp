@@ -1,0 +1,60 @@
+body {
+}
+
+.parent {
+  display: flex;
+  /* eje Principal */
+  flex-direction: row;
+  /* direction: lr; */
+  /* flex-wrap: nowrap;o */
+  flex-flow: row nowrap;
+  border: 5px solid #000;
+  width: 300px;
+  /* height: 400px; */
+  /* writing-mode: vertical-lr; */
+  box-sizing: border-box;
+  justify-content: center;
+  align-content: center;
+  /* align-items: center; */
+  gap: 16px;
+}
+
+.item {
+  border: 1px solid;
+  box-sizing: border-box;
+  opacity: .9;
+  width: 50px;
+  height: 50px;
+  background: #09f;
+
+  /* Los elementos no Crecen */
+  /* flex-grow: 0; */
+  /* Los elementos pueden reducir su tamannio a un tamannio mas pequieno que sus flex-basis */
+  /* flex-shrink: 1; */
+  /* Los elementos tiene un tamannio base */
+  /* flex-basis: 0; */
+
+  /* flex: 1; */
+  /* flex: auto; */
+
+}
+
+.item:first-child {
+  background: orange;
+  height: 50px;
+  /* flex: 4;
+  order: 3; */
+}
+
+.item:nth-child(2) {
+  background: #09f;
+  height: 25px;
+  /* flex: 2;
+  order: 2; */
+}
+.item:last-child {
+  background: red;
+  height: 15px;
+  /* flex: 1;
+  order: 1; */
+}
