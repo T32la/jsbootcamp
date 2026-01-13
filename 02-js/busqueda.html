@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>DevJobs - Empleos</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Listado con empleos y filtros para encontrar el trabajo de tus suennios."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script> -->
+    <!---->
+
+    <!-- parcea el js, completa la carga del todo el html y luego ejecuta el script -->
+    <script type="module" src="./script.js"></script>
+    <!-- </script> -->
+  </head>
+  <body>
+    <header class="busqueda">
+      <nav class="nav-busqueda">
+        <div class="right">
+          <h1>
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            DevJobs
+          </h1>
+          <a href="index.html" target="_self">Inicio</a>
+          <a href="busqueda.html" rel="noopener noreferrer">Empleos</a>
+          <a href="#">Empresas</a>
+          <a href="#">Salarios</a>
+        </div>
+
+        <div class="left">
+          <button>Subir CV</button>
+          <img
+            style="width: 50px; height: 50px; border-radius: 50%"
+            src="./images/cat.webp"
+            alt="foto de perfil"
+          />
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="jobs-search">
+        <h1>Encuentra tu proximo trabajo</h1>
+        <p>Explora miles de oportunidades en el sector tecnologico.</p>
+
+        <form role="search" class="search">
+          <div class="search-bar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-search icon_search"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+            <input
+              required
+              type="text"
+              class="search_input"
+              placeholder="Buscar ofertas de trabajo, empresas o habilidades...."
+            />
+          </div>
+
+          <div class="search-filters">
+            <select name="tecnologia" id="technology">
+              <option>Tecnologia</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="js">JavaScript</option>
+            </select>
+            <select name="ubicacion" id="location">
+              <option>Ubicacion</option>
+              <option value="lugar">Local</option>
+              <option value="lugar">Nacional</option>
+              <option value="lugar">Internacional</option>
+            </select>
+            <select name="contrato" id="contrato">
+              <option>Tipo de Contrato</option>
+              <option value="Tipo">Parcial</option>
+              <option value="Tipo">Completo</option>
+              <option value="Tipo">Plus</option>
+            </select>
+            <select name="experiencia" id="experiencia-level">
+              <option>Nivel de Experiencia</option>
+              <option value="nivel">Principiante</option>
+              <option value="nivel">Intermedio</option>
+              <option value="nivel">Avanzado</option>
+            </select>
+          </div>
+        </form>
+      </section>
+
+      <section>
+        <h2>Resultados de Busqueda</h2>
+        <div class="job-listing-card">
+          <article class="search_card job-listing-card">
+            <div>
+              <h3>Ingeniero de Software</h3>
+              <span><small>Tech Solutions Inc. | Remoto</small></span>
+              <p>
+                Buscamos un ingeniero de software con experiencia en desarrollo
+                web y conocimientos en JavaScript, React y Node.js. El candidato
+                ideal debe ser capaz de trabajar y tener buenas habilidades de
+                comunicacion.
+              </p>
+            </div>
+            <div>
+              <button id="boton-importante">Aplicar</button>
+            </div>
+          </article>
+          <article class="search_card job-listing-card">
+            <div>
+              <h3>Analista de Datos</h3>
+              <span><small>Data Driven Co. | Ciudad de Mexico</small></span>
+              <p>
+                Estamos buscando un analista de datos con experiencia en el
+                manejo de grandes conjutos de datos y herramientas de
+                visualizacion. Se requiere conocimiento en SQL, Python y r.
+              </p>
+            </div>
+            <div>
+              <button>Aplicar</button>
+            </div>
+          </article>
+          <article class="search_card job-listing-card">
+            <div>
+              <h3>Desarrollador de Aplicaciones Moviles</h3>
+              <span><small>Mobile Apps Ltd. | Guadalajara</small></span>
+              <p>
+                Buscamos un desarrollador de aplicaciones moviles con
+                experiencia en iOS y/o Android. El candidato debe tener
+                conocimientos en Swift, Kotlin y el desarrollo de interfaces de
+                usuario.
+              </p>
+            </div>
+            <div>
+              <button>Aplicar</button>
+            </div>
+          </article>
+          <article class="search_card job-listing-card">
+            <div>
+              <h3>Ingeniero de DevOps</h3>
+              <span><small>Cloud Services SA | Remoto</small></span>
+              <p>
+                Estamos buscando un ingeniero de DevOps con experiencia en la
+                gestion de infraestructuras en la nube, automatizacion de
+                procesos y herramientas de integracion continua. Se requiere
+                conocimientos en Aws, Azure o GCP.
+              </p>
+            </div>
+            <div>
+              <button>Aplicar</button>
+            </div>
+          </article>
+        </div>
+        <nav class="pagination">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M15 6l-6 6l6 6" /></svg
+          ></a>
+          <a href="#1" class="is-active">1</a>
+          <a href="#2">2</a>
+          <a href="#3">3</a>
+          <a href="#4">4</a>
+          <a href="#5">5</a>
+          <a href="#>"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M9 6l6 6l-6 6" /></svg
+          ></a>
+        </nav>
+      </section>
+    </main>
+    <footer style="padding-bottom: 2000px">
+      <small>&copy; 2025 DevJobs. Todos los derechos reservados.</small>
+    </footer>
+  </body>
+</html>
