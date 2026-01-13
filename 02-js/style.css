@@ -526,6 +526,7 @@ footer > .paginacion > a:hover {
     pointer-events: none;
   }
 }
-#boton-importante {
-  background: #09f;
-}
+
+/* #boton-importante { */
+/*   background: #09f; */
+/* } */
