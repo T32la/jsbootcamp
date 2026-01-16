@@ -1,15 +1,13 @@
-const botones = document.querySelectorAll(".button-apply-job");
-console.log(botones);
+// Aplicando un evento para muchos eventos
+// delegacion de eventos
+const jobsListingSection = document.querySelector(".jobs-listings");
 
-botones.forEach((boton) => {
-  if (boton != null) {
-    boton.addEventListener("click", function responseClick() {
-      boton.textContent = "Aplicado!";
-      boton.classList.add("is-applied");
-      boton.disabled = true;
-    });
+jobsListingSection.addEventListener("click", function (event) {
+  const element = event.target;
+
+  if (element.classList.contains("button-apply-job")) {
+    element.textContent = "Aplicado!";
+    element.classList.add("is-applied");
+    element.disabled = true;
   }
 });
-
-console.log("Esto se muestra inmediatamente");
-console.log("Hola soy un console log");
