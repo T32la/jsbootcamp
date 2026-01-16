@@ -2,7 +2,7 @@
 // delegacion de eventos
 const jobsListingSection = document.querySelector(".jobs-listings");
 
-jobsListingSection.addEventListener("click", function (event) {
+jobsListingSection?.addEventListener("click", function (event) {
   const element = event.target;
 
   if (element.classList.contains("button-apply-job")) {
