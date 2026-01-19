@@ -3,7 +3,7 @@
 const jobsListingSection = document.querySelector(".jobs-listings");
 const filterTecnology = document.querySelector("#filter-technology");
 const filterUbication = document.querySelector("#filter-location");
-const filterExperience = document.querySelector("#filter-experience-level")
+const filterExperience = document.querySelector("#filter-experience-level");
 
 jobsListingSection?.addEventListener("click", function (event) {
   const element = event.target;
@@ -15,14 +15,26 @@ jobsListingSection?.addEventListener("click", function (event) {
   }
 });
 
-filterTecnology.addEventListener("change", function () {
-  console.log(filterTecnology.value);
+const filter = document.querySelector("#filter-location");
+const mensaje = document.querySelector("#filter-selected-value");
+
+filter.addEventListener("change", function () {
+  const selectedValue = filter.value;
+  if (selectedValue) {
+    mensaje.textContent = `Filtro seleccionado: ${selectedValue}`;
+  } else {
+    mensaje.trextContent = "";
+  }
 });
 
-filterUbication.addEventListener("change", function() {
-  console.log(filterUbication.value)
-})
+const searchInput = document.querySelector("#empleos-search-input");
 
-filterExperience.addEventListener("change", function() {
-  console.log(filterExperience.value);
-})
+searchInput.addEventListener("input", function () {
+  // const inputValue = searchInput.value;
+  console.log(searchInput.value);
+});
+
+searchInput.addEventListener("blur", function () {
+  console.log("Se dispara cuando el campo pierde el foco.");
+});
+
