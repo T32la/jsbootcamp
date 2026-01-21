@@ -30,7 +30,9 @@ filter.addEventListener("change", function () {
 
 
   jobs.forEach(job => {
-    const modalidad = job.dataset.modalidad;
+    // const modalidad = job.dataset.modalidad;
+    const modalidad = job.getAttribute("data-modalidad");
+
     // console.log(modalidad);
 
     if (selectedValue === "" || selectedValue === modalidad) {
