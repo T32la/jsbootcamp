@@ -17,28 +17,37 @@ jobsListingSection?.addEventListener("click", function (event) {
 
 const filter = document.querySelector("#filter-location");
 const mensaje = document.querySelector("#filter-selected-value");
-const jobs = document.querySelectorAll(".job-listing-card");
 
 filter.addEventListener("change", function () {
   const selectedValue = filter.value;
-
   if (selectedValue) {
     mensaje.textContent = `Filtro seleccionado: ${selectedValue}`;
   } else {
     mensaje.trextContent = "";
   }
-
-
-  jobs.forEach(job => {
-    const modalidad = job.dataset.modalidad;
-    // console.log(modalidad);
-
-    if (selectedValue === "" || selectedValue === modalidad) {
-      job.style.display = "flex";
-      // job.classList.remove('is-hidden');
-    } else {
-      job.style.display = 'none';
-      // job.classList.add('is-hidden');
-    }
-  })
 });
+
+const searchInput = document.querySelector("#empleos-search-input");
+
+searchInput.addEventListener("input", function () {
+  // const inputValue = searchInput.value;
+  console.log(searchInput.value);
+});
+
+searchInput.addEventListener("blur", function () {
+  console.log("Se dispara cuando el campo pierde el foco.");
+});
+
+
+const searchForm = document.querySelector("#empleos-search-form");
+
+searchForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  console.log("submit");
+})
+
+document.addEventListener('keydown', function(event) {
+  console.log("Tecla presionada: ", event.key );
+  console.log("Esta pulsado la tecla shift? ", event.shiftKey);
+  console.log("Esta pulsada la tecla ctrl? ", event.ctrlKey);
+})
