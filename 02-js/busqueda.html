@@ -87,11 +87,18 @@
 
           <div class="search-filters">
             <select name="technology" id="filter-technology">
-              <option value="">Tecnologia</option>
-              <option value="javascript">JavaScript</option>
-              <option value="python">Python</option>
-              <option value="react">React</option>
-              <option value="nodejs">Node.js</option>
+              <optgroup label="Tecnologías Populares">
+                <option value="">Tecnologia</option>
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="react">React</option>
+                <option value="nodejs">Node.js</option>
+              </optgroup>
+              <hr />
+              <option value="java">Java</option>
+              <hr />
+              <option value="ruby">Ruby</option>
+              <option value="csharp">C#</option>
             </select>
             <select name="location" id="filter-location">
               <option value="">Ubicación</option>
@@ -164,7 +171,11 @@
               <button class="button-apply-job">Aplicar</button>
             </div>
           </article>
-          <article data-tecnhology="react" data-modalidad="remoto" class="job-listing-card">
+          <article
+            data-tecnhology="react"
+            data-modalidad="remoto"
+            class="job-listing-card"
+          >
             <div>
               <h3>Ingeniero de DevOps</h3>
               <span><small>Cloud Services SA | Remoto</small></span>
