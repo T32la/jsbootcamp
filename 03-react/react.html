@@ -9,23 +9,43 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-
     <script type="module">
       import React from "https://esm.sh/react?dev";
       import ReactDOM from "https://esm.sh/react-dom/client?dev";
 
-      const titulo = React.createElement(
-        "h1",
-        { style: { color: "#09f" } },
-        "Hola, React.js!",
-      );
-
-      const rootEl = document.querySelector("#app-root");
-      const root = ReactDOM.createRoot(rootEl);
-      root.render(titulo);
+      window.React = React;
+      window.ReactDOM = ReactDOM;
     </script>
 
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      // Crear un elemento
+      const titulo = React.createElement(
+        "h1",
+        { style: { color: "#09f" } },
+        "Hola, Bienvenidos a React.js!",
+      );
+
+      // Componente de React
+      function Saludo({ nombre }) {
+        return <h2 style={{ color: "#09f" }}>Hola {nombre}</h2>;
+      }
+
+      function App() {
+        return (
+          <div>
+            <Saludo nombre="Miguel" />
+            <Saludo nombre="Luis" />
+            <Saludo nombre="Javier" />
+          </div>
+        );
+      }
+
+      const rootEl = document.querySelector("#root");
+      const root = ReactDOM.createRoot(rootEl);
+      root.render(<App />);
+    </script>
   </head>
 
   <body>
