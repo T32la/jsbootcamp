@@ -33,6 +33,10 @@
       }
 
       function JobCard({ data, titulo, empresa, ubicacion, descripcion }) {
+        function handleClick() {
+          alert(`Has aplicado al empleo: ${titulo}`);
+        }
+
         return (
           <article
             class="job-listing-card"
@@ -47,7 +51,9 @@
               </small>
               <p>{descripcion}</p>
             </div>
-            <button class="button-apply-job">Aplicar</button>
+            <button class="button-apply-job" onClick={handleClick}>
+              Aplicar
+            </button>
           </article>
         );
       }
