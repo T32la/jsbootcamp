@@ -33,8 +33,17 @@
       }
 
       function JobCard({ data, titulo, empresa, ubicacion, descripcion }) {
+        const [isApplied, setIsApplied] = React.useState(false);
+
+        // const numbers = [1, 2, 3, 4, 5];
+        // const [firstNumeber, secondNumber,,,] = numbers;
+
+        const text = isApplied ? "Aplicado" : "Aplicar";
+        const buttonClass = isApplied ? "is-applied" : "";
+
         function handleClick() {
-          alert(`Has aplicado al empleo: ${titulo}`);
+          setIsApplied(!isApplied);
+          // alert(`Has aplicado al empleo: ${titulo}`);
         }
 
         return (
@@ -51,8 +60,12 @@
               </small>
               <p>{descripcion}</p>
             </div>
-            <button class="button-apply-job" onClick={handleClick}>
-              Aplicar
+            <button
+              disabled={isApplied}
+              className={`button-apply-job ${buttonClass}`}
+              onClick={handleClick}
+            >
+              {text}
             </button>
           </article>
         );
