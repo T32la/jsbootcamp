@@ -41,6 +41,7 @@
         const text = isApplied ? "Aplicado" : "Aplicar";
         const buttonClass = isApplied ? "is-applied" : "";
 
+        console.log("--render");
         function handleClick() {
           setIsApplied(!isApplied);
           // alert(`Has aplicado al empleo: ${titulo}`);
@@ -56,15 +57,11 @@
             <div>
               <h3>{titulo}</h3>
               <small>
-                {empresa} - {ubicacion}
+                {empresa} - {ubicacion} - He Aplicado? {isApplied ? "Sí" : "No"}
               </small>
               <p>{descripcion}</p>
             </div>
-            <button
-              disabled={isApplied}
-              className={`button-apply-job ${buttonClass}`}
-              onClick={handleClick}
-            >
+            <button className={`button-apply-job`} onClick={handleClick}>
               {text}
             </button>
           </article>
