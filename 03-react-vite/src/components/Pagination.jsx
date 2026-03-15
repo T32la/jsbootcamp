@@ -1,5 +1,4 @@
 export function Pagination({ currentPage = 1, totalPages = 10, onPageChange }) {
-  console.log("Render pagination");
   // generar un array de paginas a mostrar
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
