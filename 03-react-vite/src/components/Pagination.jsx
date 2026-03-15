@@ -1,3 +1,5 @@
+import style from "./Pagination.module.css";
+
 export function Pagination({ currentPage = 1, totalPages = 10, onPageChange }) {
   // generar un array de paginas a mostrar
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
@@ -36,7 +38,7 @@ export function Pagination({ currentPage = 1, totalPages = 10, onPageChange }) {
   };
 
   return (
-    <nav className="pagination">
+    <nav className={style.pagination}>
       {!isFirstPage && (
         <a href="#" style={stylePrevButton} onClick={handlePrevClick}>
           <svg
@@ -61,7 +63,7 @@ export function Pagination({ currentPage = 1, totalPages = 10, onPageChange }) {
           key={page}
           data-page={page}
           href={`#${page}`}
-          className={currentPage === page ? "is-active" : ""}
+          className={currentPage === page ? style.isActive : ""}
           onClick={(event) => handleChangePage(event, page)}
         >
           {page}
