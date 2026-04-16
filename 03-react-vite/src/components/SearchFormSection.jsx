@@ -1,22 +1,39 @@
 import { useId } from "react";
 
-export function SearchFormSection() {
-  const idText = useId();
+export function SearchFormSection({ onTextFilter, onSearch }) {
+  // const idText = useId();
   const idTechnology = useId();
   const idLocation = useId();
   const idExperienceLevel = useId();
 
   const handleSubmit = (event) => {
+    console.log("handleSubmit...");
+
     event.preventDefault();
-    console.log("Submit del formulario de busqueda...");
+
+    const formData = new FormData(event.curretnTarget);
+
+    const filters = {
+      technology: formData.get(idTechnology),
+      location: formData.get(idLocation),
+      experienceLevel: formData.get(idExperienceLevel),
+    };
+
+    onSearch(filters);
   };
+
+  const handleTextChange = (event) => {
+    const text = event.target.value;
+    onTextFilter(text);
+  };
+
   return (
     <section className="jobs-search">
       <h1>Encuentra tu proximo trabajo</h1>
       <p>Explora miles de oportunidades en el sector tecnologico.</p>
 
       <form
-        onSubmit={handleSubmit}
+        onChange={handleSubmit}
         id="empleos-search-form"
         role="search"
         className="search"
@@ -41,14 +58,14 @@ export function SearchFormSection() {
           <input
             name="idText"
             id="empleos-search-input"
-            required
             type="text"
             className="search_input"
             placeholder="Buscar ofertas de trabajo, empresas o habilidades...."
+            onChange={handleTextChange}
           />
-          <button type="submit" style={{ position: "absolute", right: "4px" }}>
+          {/* <button type="submit" style={{ position: "absolute", right: "4px" }}>
             Buscar
-          </button>
+          </button> */}
         </div>
 
         <div className="search-filters">
