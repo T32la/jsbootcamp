@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+
 import { SearchFormSection } from "./../components/SearchFormSection.jsx";
 import { JobListings } from "./../components/JobListings.jsx";
 import { Pagination } from "./../components/Pagination.jsx";
-
 import jobsData from "../components/data.json";
 
 const RESULTS_PER_PAGE = 4;
@@ -18,7 +18,11 @@ export function SearchPage() {
 
   const jobsFilteredByFilters = jobsData.filter((job) => {
     return (
-      filters.technology === "" || job.data.technology === filters.technology
+      (filters.technology === "" ||
+        job.data.technology === filters.technology) &&
+      (filters.location === "" || job.data.modalidad === filters.location) &&
+      (filters.experienceLevel === "" ||
+        job.data.nivel === filters.experienceLevel)
     );
   });
 
@@ -58,6 +62,21 @@ export function SearchPage() {
     setTextToFilter(newTextFilter);
     setCurrentPage(1);
   };
+
+  useEffect(() => {
+    document.title = `Resultados: ${jobsWithTextFilter.length}, Pagina ${currentPage} - DevJobs`;
+  }, [jobsWithTextFilter, currentPage]);
+
+  useEffect(() => {
+    // suscripcion a un evento
+    const handleResize = () => {
+      console.log("Ventana redimensionada");
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <main>
